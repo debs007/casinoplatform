@@ -229,13 +229,16 @@ namespace bigsmall
 
         public void OpenTodayPanel()
         {
+            game.DiceArea.SetActive(false);
             if (todayPanel != null) todayPanel.SetActive(true);
             if (scrollRect != null) scrollRect.verticalNormalizedPosition = 1f;
             RefreshToday();
+
         }
 
         public void CloseTodayPanel()
         {
+            game.DiceArea.SetActive(true);
             if (todayPanel != null) todayPanel.SetActive(false);
         }
 

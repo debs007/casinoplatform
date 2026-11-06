@@ -128,7 +128,7 @@ namespace SingleChance
         public void ReloadScene()
         {
             StartCoroutine(SetOnlineStatus("no"));
-            SceneManager.LoadSceneAsync(0);
+            SceneManager.LoadSceneAsync(1);
         }
 
 

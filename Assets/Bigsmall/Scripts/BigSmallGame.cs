@@ -64,6 +64,7 @@ namespace bigsmall
         public TextRef bigBetText = new TextRef();
 
         public GameObject DiceArea;
+        public GameObject MessageArea;
 
         [Header("Bet")]
         public Button betButton;
@@ -648,6 +649,7 @@ namespace bigsmall
         void ShowMessage(string message)
         {
             messageText.Set(message);
+            MessageArea.SetActive(true);
             if (messageRoutine != null) StopCoroutine(messageRoutine);
             messageRoutine = StartCoroutine(ClearMessageAfter(messageSeconds));
         }
@@ -656,6 +658,7 @@ namespace bigsmall
         {
             yield return new WaitForSecondsRealtime(seconds);
             messageText.Set("");
+            MessageArea.SetActive(false);
         }
 
         void Play(AudioClip clip)
