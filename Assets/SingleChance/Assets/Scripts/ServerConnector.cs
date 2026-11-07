@@ -42,8 +42,8 @@ namespace SingleChance
             GetPoints.getPoints.SetServerBalance(Constants.userData.balance);
             GetPoints.getPoints.MyName.text = "Welcome, " + Constants.userData.name;
 
-            PlayerPrefs.SetString("name", uId.text);
-            PlayerPrefs.SetString("pass", Pass.text);
+            //PlayerPrefs.SetString("name", uId.text);
+            //PlayerPrefs.SetString("pass", Pass.text);
             yield return new WaitForSeconds(1f);
             StartGaming();
         }
